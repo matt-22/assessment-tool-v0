@@ -1,0 +1,27 @@
+<mat-toolbar class="main-menu">
+  <span>Assessment Tool</span>
+
+  <span class="menu-spacer"></span>
+
+  <button matButton [matMenuTriggerFor]="riderMenu">Riders</button>
+  <mat-menu #riderMenu="matMenu" yPosition="below">
+    <button mat-menu-item routerLink="/rider">New</button>
+    <button mat-menu-item>View</button>
+  </mat-menu>
+
+  <button matButton [matMenuTriggerFor]="assessmentMenu">Assessments</button>
+  <mat-menu #assessmentMenu="matMenu" yPosition="below">
+    <button mat-menu-item>New</button>
+    <button mat-menu-item>View</button>
+  </mat-menu>
+  
+  <button matButton [matMenuTriggerFor]="reportMenu">Reports</button>
+  <mat-menu #reportMenu="matMenu" yPosition="below">
+    <button mat-menu-item>New</button>
+    <button mat-menu-item>View</button>
+  </mat-menu>
+
+  <button matButton>
+        <mat-icon aria-hidden="false" aria-label="settings" fontIcon="settings"></mat-icon>
+    </button>
+</mat-toolbar>

@@ -1,0 +1,25 @@
+.grid-container{
+    display: grid;
+
+    // small screen
+    grid-template-columns: repeat(1, 1fr);
+
+    //gap: 1em;
+    max-width: 750px;
+    min-width: 350px;
+    //background-color: lightblue;
+    margin: 0 auto;
+    
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.grid-item{
+    //background-color: #4581f0;
+    min-width: 300px;
+    margin: 0 auto;
+}

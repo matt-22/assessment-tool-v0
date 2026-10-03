@@ -1,0 +1,38 @@
+<h2 style="text-align: center;">Add new rider</h2>
+<div class="grid-container">
+    <mat-form-field class="grid-item">
+        <mat-label>First Name</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="grid-item">
+        <mat-label>Surname</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="grid-item">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="grid-item">
+        <mat-label>Gender</mat-label>
+        <mat-select>
+            <mat-option value="m">Male</mat-option>
+            <mat-option value="f">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="grid-item">
+        <mat-label>Email</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="grid-item">
+        <mat-label>Mobile</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+</div>
