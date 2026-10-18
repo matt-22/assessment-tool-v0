@@ -1,0 +1,9 @@
+<div class="settings-container">
+    <p>Total settings: {{ settings().length }}</p>
+</div>
+
+<div class="settings-grid">
+    @for (setting of settings(); track setting.id) {
+        <app-settings-card [setting]="setting"></app-settings-card>
+    }
+</div>

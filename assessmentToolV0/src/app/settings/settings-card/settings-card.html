@@ -1,0 +1,13 @@
+<mat-card class="settings-card">
+    <mat-card-header>
+        <mat-card-title>{{ setting().name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p>{{setting().description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a matButton="filled" routerLink="{{ setting().buttonNav}}">Manage</a>
+    </mat-card-actions>
+
+</mat-card>

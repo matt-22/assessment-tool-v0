@@ -10,6 +10,9 @@ const pool = mysql.createPool({
     database: process.env.MYSQL_DATABASE
 }).promise()
 
+
+// #######################################################################################
+// EQUIPMENT
 export async function getEquipmentList() {
     const [rows] = await pool.query(`SELECT * FROM equipment`)
     /*  query returns an array of js objects
@@ -37,4 +40,32 @@ export async function createEquipment(title) {
     return getEquipment(id)
 }
 
+// #######################################################################################
 
+// #######################################################################################
+// VENUE
+
+export async function getVenueTypeList() {
+    const [rows] = await pool.query(`SELECT * FROM venue_type`)
+    return rows
+}
+
+export async function getVenueType(id) {
+    const [rows] = await pool.query(`
+        SELECT * 
+        FROM venue_type
+        WHERE id = ?
+        `, [id])
+    return rows[0]
+}
+
+export async function createVenueType(title) {
+    const [result] = await pool.query(`
+        INSERT INTO venue_type (title)
+        VALUES (?)
+        `, [title])
+    const id = result.insertId
+    return getVenueType(id)
+}
+
+// #######################################################################################
